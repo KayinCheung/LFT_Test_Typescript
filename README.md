@@ -1,2 +1,5 @@
 # LFT_Test_Typescript
-Updated most of LFT_Test to typescript
+
+Typescript version of: https://github.com/KayinCheung/LFT_Test
+
+Converted most of app to typescript, excluding reducers.
