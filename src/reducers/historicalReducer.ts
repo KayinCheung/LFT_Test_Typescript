@@ -1,14 +1,14 @@
 import { GET_HISTORICAL, LOADING_HISTORICAL } from '../actions/types'
+import { historicalPriceActions, historicalPriceState } from '../types/interface'
 
-
-const initialState = {
+const initialState: historicalPriceState = {
     data: [],
     startTime: 0,
     endTime: 0,
     loading: true
 }
 
-export default function (state = initialState, action) {
+export default function (state = initialState, action: historicalPriceActions): historicalPriceState {
     switch (action.type) {
         case GET_HISTORICAL:
             return {

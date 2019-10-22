@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import Historical from './Historical'
 import RealTime from './RealTime'
 import { getPrice } from './actions/GetPrice'
+import { AppState } from './reducers'
 
 interface Props{
   getPrice: () => void
@@ -26,7 +27,7 @@ class Body extends React.Component<Props> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: AppState) => ({
   view: state.view.view
 })
 

@@ -8,7 +8,7 @@ import { setThreshold } from './actions/setThreshold'
 import Ticker from './Ticker'
 
 import ThresholdInput from './ThresholdInput'
-
+import { AppState } from './reducers'
 import { tickerData } from './types/interface'
 
 interface Props {
@@ -84,7 +84,7 @@ class RealTime extends React.Component<Props> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: AppState) => ({
   allData: state.price.data,
 
   updateFreq: state.freq.freq,

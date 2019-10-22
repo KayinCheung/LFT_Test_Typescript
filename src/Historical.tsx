@@ -6,10 +6,10 @@ import { getHistorical } from './actions/GetHistoricalPrice'
 import { setThreshold } from './actions/setThreshold'
 import Ticker from './Ticker'
 import ThresholdInput from './ThresholdInput'
-
+import { AppState } from './reducers'
 import { tickerDataTime } from './types/interface'
 
-let pageSize = 120
+let pageSize: number = 120
 
 interface Props {
     data: tickerDataTime[]
@@ -119,7 +119,7 @@ const pad = (input: number) => {
 
 
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: AppState) => ({
     data: state.historical.data,
     startTime: state.historical.startTime,
     endTime: state.historical.endTime,

@@ -1,11 +1,11 @@
 import { GET_PRICE } from '../actions/types'
+import { realTimePriceActions, realTimePriceState, tickerData } from '../types/interface'
 
-const initialState = {
-    data: [],
-    page: 0,
+const initialState: realTimePriceState = {
+    data: []
 }
 
-export default function (state = initialState, action) {
+export default function (state = initialState, action: realTimePriceActions): realTimePriceState {
     let newData
     switch (action.type) {
 

@@ -1,6 +1,7 @@
 import { SET_UPDATE_FREQ } from './types'
 import { Dispatch } from 'redux';
 
+
 export const setUpdateFreq = (freq: number) => (dispatch: Dispatch) => {
     const data = { "update_frequency": freq };
 

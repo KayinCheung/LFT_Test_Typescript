@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { changeView } from './actions/changeView'
-
+import { AppState } from './reducers'
 import './App.css';
 
 interface Props {
@@ -40,7 +40,7 @@ class Header extends React.PureComponent<Props> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: AppState) => ({
   view: state.view.view
 })
 export default connect(mapStateToProps, { changeView })(Header);
